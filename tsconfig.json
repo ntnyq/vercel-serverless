@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "incremental": true,
+    "declaration": true,
+    "removeComments": true,
+    "lib": [
+      "DOM",
+      "ES2020"
+    ],
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "strictNullChecks": true,
+    "target": "ES2020",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "baseUrl": "."
+  },
+  "include": [
+    "api/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
