@@ -9,5 +9,10 @@
   "github": {
     "silent": true
   },
-  "redirects": []
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://ntnyq.com"
+    }
+  ]
 }
