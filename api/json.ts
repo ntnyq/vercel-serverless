@@ -6,5 +6,5 @@ import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { PACKAGE_JSON } from '../app/constants'
 
 export default function (req: VercelRequest, res: VercelResponse) {
-  res.json(PACKAGE_JSON)
+  res.json(JSON.parse(PACKAGE_JSON))
 }

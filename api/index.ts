@@ -21,19 +21,36 @@ const list: Item[] = [
 
 const createContent = () => {
   return `<ul>${list
-    .map(v => `<li><a href="/api/${v.url}" target="_blank">${v.name}</a><li>`)
+    .map(v => `<li><a href="/api/${v.url}" target="_blank">${v.name}</a></li>`)
     .join(``)}</ul>`
 }
 
-const style = `padding: 40px 20px; max-width: 60ch; font-size: 1.2em; margin: 0 auto;`
+const style = `
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container ul {
+  position: relative;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+}
+`
 
 const html = `
   <head>
     <title>vercel serverless</title>
+    <style>${style}</style>
   </head>
   <body>
-    <div style="${style}">
-    ${createContent()}
+    <div class="container">
+      ${createContent()}
     </div>
   </body>
 `
